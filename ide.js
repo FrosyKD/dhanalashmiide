@@ -196,11 +196,11 @@ function handleResult(data) {
     console.log("It took " + (timeEnd - timeStart) + " ms to get submission result.");
     var status = data.status;
     var stdout = decode(data.stdout);
-  if(stdout==null)
+  if(stdout=="")
     {
       stdout= decode(data.stderr);
     }
-    if(stdout==null)
+    if(stdout=="")
     {
       stdout = decode(data.compile_output);
     }
